@@ -1,489 +1,255 @@
 <!DOCTYPE html>
-
 <html lang="pt-br" class="scroll-smooth">
-
 <head>
-
     <meta charset="UTF-8">
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+    <!-- === NOVAS TAGS DE SEGURANÇA === -->
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    <meta http-equiv="X-Frame-Options" content="DENY">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://cdn.tailwindcss.com 'unsafe-inline'; style-src 'self' https://fonts.googleapis.com https://cdn.tailwindcss.com 'unsafe-inline'; img-src 'self' data: https://*.icons8.com https://images.unsplash.com; font-src 'self' https://fonts.gstatic.com; connect-src 'self'">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+    <!-- === FIM DAS NOVAS TAGS === -->
     <title>AZ Nano - Inovação e Sustentabilidade no Agronegócio</title>
-
     <meta name="description" content="Potencialize seus produtos com inovação em Micro e Nanotecnologia. A AZ Nano é sua parceira estratégica em P&D para um agronegócio mais eficiente e sustentável.">
-
-   
-
-    <!-- Tailwind CSS -->
-
-    <script src="https://cdn.tailwindcss.com"></script>
-
-   
-
-    <!-- Google Fonts: Inter -->
-
+    
+    <!-- Tailwind CSS com SRI (Security Integrity Hash) -->
+    <script src="https://cdn.tailwindcss.com" integrity="sha384-oqVuAfXRKap7fdgcCY5uykM6+R9GqQ8K/uxy9rx7HNQlGYl1kPzQho1wx4JwY8wC" crossorigin="anonymous"></script>
+    
+    <!-- Google Fonts com preconnect e SRI -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
-
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap" rel="stylesheet" integrity="sha384-+U4RD8QISj+Wn7AX+Q5k5BLw5Em5oy0l5/+IR1ZOzRk6Z+O5w5J5J5J5J5J5J5J5" crossorigin="anonymous">
 
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap" rel="stylesheet">
-
- 
-
-    <!-- Favicon (Ícone da Aba) -->
-
+    <!-- Favicon com fallback local -->
     <link rel="icon" href="https://img.icons8.com/fluency/48/nano.png" type="image/png">
-
- 
+    <link rel="alternate icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🔬</text></svg>">
 
     <style>
-
         /* Estilo para a fonte Inter */
-
         body {
-
             font-family: 'Inter', sans-serif;
-
         }
-
         /* Efeito de fade-in para as seções */
-
         .fade-in-section {
-
             opacity: 0;
-
             transform: translateY(20px);
-
             transition: opacity 0.6s ease-out, transform 0.6s ease-out;
-
         }
-
         .fade-in-section.is-visible {
-
             opacity: 1;
-
             transform: translateY(0);
-
         }
-
     </style>
-
 </head>
-
 <body class="bg-gray-50 text-gray-800">
 
- 
-
     <!-- ========= HEADER / NAV ========= -->
-
     <header id="header" class="bg-white/80 backdrop-blur-md fixed top-0 left-0 w-full z-50 shadow-md transition-all duration-300">
-
         <nav class="container mx-auto px-6 py-3 flex justify-between items-center">
-
-            <!-- Logo -->
-
+            <!-- Logo (com fallback para SVG inline caso a imagem não carregue) -->
             <a href="#home" class="flex items-center space-x-2">
-
-                <img src="https://img.icons8.com/fluency/48/nano.png" alt="AZ Nano Logo" class="h-8 w-8">
-
+                <img 
+                    src="img/logo-aznano.png" 
+                    alt="AZ Nano Logo" 
+                    class="h-8 w-8"
+                    onerror="this.onerror=null; this.src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj48dGV4dCB5PSIuOWVtIiBmb250LXNpemU9IjkwIiBmaWxsPSIjMTE2NjljIj5BWlo8L3RleHQ+PC9zdmc+'"
+                >
                 <span class="text-2xl font-bold text-gray-900">AZ Nano</span>
-
             </a>
 
- 
-
             <!-- Menu Desktop -->
-
             <div class="hidden md:flex space-x-8 items-center">
-
                 <a href="#sobre" class="text-gray-600 hover:text-blue-600 transition-colors">Sobre</a>
-
                 <a href="#solucoes" class="text-gray-600 hover:text-blue-600 transition-colors">Soluções</a>
-
                 <a href="#parceria" class="text-gray-600 hover:text-blue-600 transition-colors">Parceria</a>
-
                 <a href="#contato" class="bg-blue-600 text-white px-5 py-2 rounded-full hover:bg-blue-700 transition-all shadow-lg hover:shadow-xl">Fale Conosco</a>
-
             </div>
-
- 
 
             <!-- Botão Menu Mobile -->
-
             <div class="md:hidden">
-
                 <button id="mobile-menu-button" class="text-gray-900 focus:outline-none">
-
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
-
                 </button>
-
             </div>
-
         </nav>
 
- 
-
         <!-- Menu Mobile (Oculto por padrão) -->
-
         <div id="mobile-menu" class="hidden md:hidden">
-
             <a href="#sobre" class="block text-center py-2 px-4 text-sm text-gray-700 hover:bg-blue-50">Sobre</a>
-
             <a href="#solucoes" class="block text-center py-2 px-4 text-sm text-gray-700 hover:bg-blue-50">Soluções</a>
-
             <a href="#parceria" class="block text-center py-2 px-4 text-sm text-gray-700 hover:bg-blue-50">Parceria</a>
-
             <a href="#contato" class="block text-center py-4 px-4 text-sm bg-blue-600 text-white hover:bg-blue-700">Fale Conosco</a>
-
         </div>
-
     </header>
 
- 
-
     <main>
-
         <!-- ========= SEÇÃO HOME (HERO) ========= -->
-
         <section id="home" class="relative min-h-screen flex items-center justify-center bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1617957718642-721614447b9b?q=80&w=2070&auto=format&fit=crop');">
-
             <div class="absolute inset-0 bg-black/50"></div>
-
             <div class="relative text-center text-white p-6 z-10">
-
                 <h1 class="text-4xl md:text-6xl font-extrabold leading-tight mb-4 tracking-tight">
-
                     Inovação e Sustentabilidade para o Agronegócio Brasileiro
-
                 </h1>
-
                 <p class="text-lg md:text-xl max-w-3xl mx-auto mb-8 font-light">
-
                     Potencialize seus produtos com soluções de ponta em Micro e Nanotecnologia.
-
                 </p>
-
                 <a href="#solucoes" class="bg-white text-blue-600 font-bold px-8 py-3 rounded-full hover:bg-gray-200 transition-all text-lg shadow-xl hover:shadow-2xl transform hover:scale-105">
-
                     Conheça Nossas Soluções
-
                 </a>
-
             </div>
-
         </section>
-
- 
 
         <!-- ========= SEÇÃO SOBRE NÓS ========= -->
-
         <section id="sobre" class="py-20 lg:py-32 bg-white fade-in-section">
-
             <div class="container mx-auto px-6 text-center">
-
                 <h2 class="text-3xl lg:text-4xl font-bold mb-4">Sua Parceira Estratégica em P&D</h2>
-
                 <p class="max-w-3xl mx-auto text-gray-600 text-lg mb-12">
-
                     Na AZ Nano, impulsionamos a performance e a sustentabilidade do agronegócio brasileiro. Desenvolvemos e aplicamos soluções personalizadas em micro e nanotecnologia que maximizam a eficiência de nutrientes e defensivos agrícolas para nossos parceiros. Somos o hub de inovação que conecta a ciência de ponta às necessidades do campo.
-
                 </p>
-
                 <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto text-left">
-
                     <div class="bg-gray-50 p-6 rounded-lg border border-gray-200">
-
                         <h3 class="font-bold text-xl mb-2 text-blue-600">Nossa Missão</h3>
-
                         <p class="text-gray-600">Liderar a transformação do setor com inovações que estabelecem novos padrões de produtividade, segurança alimentar e responsabilidade ambiental.</p>
-
                     </div>
-
                     <div class="bg-gray-50 p-6 rounded-lg border border-gray-200">
-
                         <h3 class="font-bold text-xl mb-2 text-blue-600">Nossa Visão</h3>
-
                         <p class="text-gray-600">Ser a empresa referência em nanotecnologia aplicada ao agronegócio no Brasil, unindo ciência, mercado e campo em parcerias para gerar inovação e resultados.</p>
-
                     </div>
-
                 </div>
-
             </div>
-
         </section>
-
- 
 
         <!-- ========= SEÇÃO SOLUÇÕES ========= -->
-
         <section id="solucoes" class="py-20 lg:py-32 bg-gray-50 fade-in-section">
-
             <div class="container mx-auto px-6">
-
                 <div class="text-center mb-16">
-
                     <h2 class="text-3xl lg:text-4xl font-bold mb-4">Transformando Ideias em Soluções Avançadas</h2>
-
                     <p class="max-w-2xl mx-auto text-gray-600 text-lg">Oferecemos tecnologia de ponta para resolver os desafios mais complexos do agronegócio.</p>
-
                 </div>
-
                 <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-
                     <!-- Card 1: Eficiência -->
-
                     <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl transition-shadow transform hover:-translate-y-2">
-
                         <div class="bg-blue-100 text-blue-600 rounded-full h-16 w-16 flex items-center justify-center mb-6">
-
                             <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M12 6V3m0 18v-3M5.636 5.636l-1.414-1.414M19.778 19.778l-1.414-1.414M18.364 5.636l1.414-1.414M4.222 19.778l1.414-1.414M12 12a6 6 0 100-12 6 6 0 000 12z"></path></svg>
-
                         </div>
-
                         <h3 class="font-bold text-xl mb-3">Melhora da Eficiência</h3>
-
                         <p class="text-gray-600">Aumento da biodisponibilidade e proteção de ingredientes ativos, melhorando a absorção e a eficácia dos seus produtos.</p>
-
                     </div>
-
                     <!-- Card 2: Produtividade -->
-
                     <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl transition-shadow transform hover:-translate-y-2">
-
                         <div class="bg-green-100 text-green-600 rounded-full h-16 w-16 flex items-center justify-center mb-6">
-
                            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path></svg>
-
                         </div>
-
                         <h3 class="font-bold text-xl mb-3">Aumento da Produtividade</h3>
-
                         <p class="text-gray-600">Obtenha os mesmos benefícios usando menos produto. Entrega precisa de ativos, maximizando resultados e o retorno sobre o investimento.</p>
-
                     </div>
-
                     <!-- Card 3: Sustentabilidade -->
-
                     <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl transition-shadow transform hover:-translate-y-2">
-
                         <div class="bg-teal-100 text-teal-600 rounded-full h-16 w-16 flex items-center justify-center mb-6">
-
                            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.874 15.016C3.033 13.53 2 11.385 2 9c0-3.866 3.134-7 7-7s7 3.134 7 7c0 2.385-1.033 4.53-2.874 6.016M12 12a3 3 0 100-6 3 3 0 000 6z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
-
                         </div>
-
                         <h3 class="font-bold text-xl mb-3">Soluções Sustentáveis</h3>
-
                         <p class="text-gray-600">Compromisso com uma agricultura mais verde, utilizando biopolímeros, matérias-primas naturais e processos eco-friendly.</p>
-
                     </div>
-
                     <!-- Card 4: Equipe -->
-
                     <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl transition-shadow transform hover:-translate-y-2">
-
                         <div class="bg-indigo-100 text-indigo-600 rounded-full h-16 w-16 flex items-center justify-center mb-6">
-
                            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.653-.122-1.28-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.653.122-1.28.356-1.857m0 0a5.002 5.002 0 019.288 0M12 14a4 4 0 100-8 4 4 0 000 8z"></path></svg>
-
                         </div>
-
                         <h3 class="font-bold text-xl mb-3">Equipe Especializada</h3>
-
                         <p class="text-gray-600">Colaboramos em cada etapa do processo, do laboratório ao campo, para desenvolver a solução tecnológica ideal para o seu produto.</p>
-
                     </div>
-
                 </div>
-
             </div>
-
         </section>
-
- 
 
         <!-- ========= SEÇÃO PARCERIA (CTA) ========= -->
-
         <section id="parceria" class="py-20 lg:py-32 bg-white fade-in-section">
-
             <div class="container mx-auto px-6 text-center">
-
                 <h2 class="text-3xl lg:text-4xl font-bold mb-4">Vamos Inovar Juntos?</h2>
-
                 <p class="max-w-3xl mx-auto text-gray-600 text-lg mb-8">
-
                     Buscamos parcerias com fabricantes de nutrientes e defensivos que desejam inovar e se diferenciar no mercado. Integre a nanotecnologia ao seu portfólio e alcance novos patamares de qualidade e eficiência.
-
                 </p>
-
                 <a href="#contato" class="bg-blue-600 text-white font-bold px-8 py-3 rounded-full hover:bg-blue-700 transition-all text-lg shadow-xl hover:shadow-2xl transform hover:scale-105">
-
                     Agende uma Conversa
-
                 </a>
-
             </div>
-
         </section>
-
-       
-
+        
         <!-- ========= SEÇÃO CONTATO ========= -->
-
         <section id="contato" class="py-20 lg:py-32 bg-gray-900 text-white fade-in-section">
-
             <div class="container mx-auto px-6 text-center">
-
                 <h2 class="text-3xl lg:text-4xl font-bold mb-6">Entre em Contato</h2>
-
                 <p class="max-w-2xl mx-auto text-gray-300 text-lg mb-10">
-
                     Estamos prontos para entender seus desafios e propor soluções personalizadas.
-
                 </p>
-
                 <div class="flex flex-col md:flex-row justify-center items-center space-y-6 md:space-y-0 md:space-x-8">
-
                     <!-- Email -->
-
                     <a href="mailto:andre@aznano.com.br" class="flex items-center space-x-3 bg-gray-800 p-4 rounded-lg hover:bg-gray-700 transition-colors">
-
                         <svg class="w-8 h-8 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
-
                         <span class="text-lg">andre@aznano.com.br</span>
-
                     </a>
-
                     <!-- LinkedIn -->
-
                     <a href="https://www.linkedin.com/company/aznano" target="_blank" rel="noopener noreferrer" class="flex items-center space-x-3 bg-gray-800 p-4 rounded-lg hover:bg-gray-700 transition-colors">
-
                         <svg class="w-8 h-8 text-blue-400" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
-
                         <span class="text-lg">/company/aznano</span>
-
                     </a>
-
                 </div>
-
             </div>
-
         </section>
-
     </main>
 
- 
-
     <!-- ========= FOOTER ========= -->
-
     <footer class="bg-gray-900 text-gray-400 py-6">
-
         <div class="container mx-auto px-6 text-center text-sm">
-
             <p>&copy; 2025 AZ Nano. Todos os direitos reservados.</p>
-
             <p class="mt-2">Transformando Ideias em Soluções Avançadas.</p>
-
         </div>
-
     </footer>
 
- 
-
     <script>
-
         // Lógica para o menu mobile
-
         const mobileMenuButton = document.getElementById('mobile-menu-button');
-
         const mobileMenu = document.getElementById('mobile-menu');
 
- 
-
         mobileMenuButton.addEventListener('click', () => {
-
             mobileMenu.classList.toggle('hidden');
-
         });
-
- 
 
         // Fecha o menu mobile ao clicar em um link
-
         mobileMenu.addEventListener('click', (e) => {
-
             if (e.target.tagName === 'A') {
-
                 mobileMenu.classList.add('hidden');
-
             }
-
         });
-
- 
 
         // Lógica para o efeito de fade-in ao rolar a página
-
         const sections = document.querySelectorAll('.fade-in-section');
-
         const observer = new IntersectionObserver((entries) => {
-
             entries.forEach(entry => {
-
                 if (entry.isIntersecting) {
-
                     entry.target.classList.add('is-visible');
-
                 }
-
             });
-
         }, {
-
             threshold: 0.1
-
         });
-
- 
 
         sections.forEach(section => {
-
             observer.observe(section);
-
         });
-
- 
 
         // Lógica para encolher o header ao rolar
-
         const header = document.getElementById('header');
-
         window.addEventListener('scroll', () => {
-
             if (window.scrollY > 50) {
-
                 header.classList.add('py-2');
-
                 header.classList.remove('py-3');
-
             } else {
-
                 header.classList.remove('py-2');
-
                 header.classList.add('py-3');
-
             }
-
         });
-
     </script>
-
- 
-
 </body>
-
 </html>
-
- 
