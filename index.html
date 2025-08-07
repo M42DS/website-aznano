@@ -46,9 +46,14 @@
     <!-- ========= HEADER / NAV ========= -->
     <header id="header" class="bg-white/80 backdrop-blur-md fixed top-0 left-0 w-full z-50 shadow-md transition-all duration-300">
         <nav class="container mx-auto px-6 py-3 flex justify-between items-center">
-            <!-- Logo -->
+            <!-- Logo (com fallback para SVG inline caso a imagem não carregue) -->
             <a href="#home" class="flex items-center space-x-2">
-                <img src="https://img.icons8.com/fluency/48/nano.png" alt="AZ Nano Logo" class="h-8 w-8">
+                <img 
+                    src="logo.jpg" 
+                    alt="AZ Nano Logo" 
+                    class="h-8 w-8"
+                    onerror="this.onerror=null; this.src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj48dGV4dCB5PSIuOWVtIiBmb250LXNpemU9IjkwIiBmaWxsPSIjMTE2NjljIj5BWlo8L3RleHQ+PC9zdmc+'"
+                >
                 <span class="text-2xl font-bold text-gray-900">AZ Nano</span>
             </a>
 
