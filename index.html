@@ -39,11 +39,18 @@
     <!-- ========= HEADER / NAV ========= -->
     <header id="header" class="bg-white/80 backdrop-blur-md fixed top-0 left-0 w-full z-50 shadow-md transition-all duration-300">
         <nav class="container mx-auto px-6 py-3 flex justify-between items-center">
-            <!-- Logo -->
-            <a href="#home" class="flex items-center space-x-2">
-                <img src="logo.jpg" alt="AZ Nano Logo" class="h-8 w-8">
-                <span class="text-2xl font-bold text-gray-900">AZ Nano</span>
-            </a>
+            <!-- Logo e Selo Empresa-Filha -->
+            <div class="flex items-center space-x-4">
+                <a href="#home" class="flex items-center space-x-2">
+                    <img src="logo.jpg" alt="AZ Nano Logo" class="h-8 w-8">
+                    <span class="text-2xl font-bold text-gray-900">AZ Nano</span>
+                </a>
+                <!-- Divisor e Selo no Header -->
+                <span class="hidden sm:inline text-gray-300">|</span>
+                <a href="https://www.inova.unicamp.br/" target="_blank" rel="noopener noreferrer" title="Empresa-Filha da Unicamp">
+                    <img src="selo-unicamp.png" alt="Selo Empresa-Filha Unicamp" class="hidden sm:block h-8 w-auto">
+                </a>
+            </div>
 
             <!-- Menu Desktop -->
             <div class="hidden md:flex space-x-8 items-center">
@@ -55,14 +62,17 @@
             </div>
 
             <!-- Botão Menu Mobile -->
-            <div class="md:hidden">
+            <div class="md:hidden flex items-center space-x-4">
+                <a href="https://www.inova.unicamp.br/" target="_blank" rel="noopener noreferrer">
+                    <img src="selo-unicamp.png" alt="Selo Empresa-Filha Unicamp" class="h-6 w-auto">
+                </a>
                 <button id="mobile-menu-button" class="text-gray-900 focus:outline-none">
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
                 </button>
             </div>
         </nav>
 
-        <!-- Menu Mobile (Oculto por padrão) -->
+        <!-- Menu Mobile -->
         <div id="mobile-menu" class="hidden md:hidden">
             <a href="#sobre" class="block text-center py-2 px-4 text-sm text-gray-700 hover:bg-blue-50">Sobre</a>
             <a href="#segmentos" class="block text-center py-2 px-4 text-sm text-gray-700 hover:bg-blue-50">Segmentos</a>
@@ -94,7 +104,7 @@
             <div class="container mx-auto px-6 text-center">
                 <h2 class="text-3xl lg:text-4xl font-bold mb-4">Sua Parceira Estratégica em P&D</h2>
                 <p class="max-w-3xl mx-auto text-gray-600 text-lg mb-12">
-                   Na AZ Nano, atuamos como um hub de P&D especializado em transformar ativos complexos em sistemas de entrega inteligentes. Utilizamos biopolímeros e processos avançados para criar microcápsulas que garantem a estabilidade de ativos sensíveis contra oxidação e degradação, promovendo uma liberação controlada e direcionada. Seja no agronegócio, em cosméticos ou fármacos, conectamos ciência de ponta à eficiência real do produto final
+                   Na AZ Nano, atuamos como um hub de P&D especializado em transformar ativos complexos em sistemas de entrega inteligentes. Utilizamos biopolímeros e processos avançados para criar microcápsulas que garantem a estabilidade de ativos sensíveis contra oxidação e degradação, promovendo uma liberação controlada e direcionada. Seja no agronegócio, em cosméticos ou fármacos, conectamos ciência de ponta à eficiência real do produto final.
                 </p>
                 <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto text-left">
                     <div class="bg-gray-50 p-6 rounded-lg border border-gray-200">
@@ -153,6 +163,7 @@
             </div>
         </section>
 
+        <!-- ========= SEÇÃO SEGMENTOS ========= -->
         <section id="segmentos" class="py-20 lg:py-32 bg-white fade-in-section border-t border-gray-100">
             <div class="container mx-auto px-6">
                 <div class="text-center mb-16">
@@ -234,11 +245,21 @@
         </section>
     </main>
 
-    <!-- ========= FOOTER ========= -->
-    <footer class="bg-gray-900 text-gray-400 py-6">
-        <div class="container mx-auto px-6 text-center text-sm">
-            <p>&copy; 2026 AZ Nano. Todos os direitos reservados.</p>
-            <p class="mt-2">Transformando Ideias em Soluções Avançadas.</p>
+    <!-- ========= FOOTER WITH UNICAMP SEAL ========= -->
+    <footer class="bg-gray-900 text-gray-400 py-10 border-t border-gray-800">
+        <div class="container mx-auto px-6 flex flex-col md:flex-row justify-between items-center space-y-6 md:space-y-0">
+            <!-- Informações Institucionais -->
+            <div class="text-center md:text-left text-sm">
+                <p>&copy; 2026 AZ Nano. Todos os direitos reservados.</p>
+                <p class="mt-1">Transformando Ideias em Soluções Avançadas.</p>
+            </div>
+            <!-- Selo Oficial com Link e Isolamento Correto -->
+            <div class="flex flex-col items-center space-y-2">
+                <a href="https://www.inova.unicamp.br/" target="_blank" rel="noopener noreferrer" class="transition-opacity hover:opacity-80" title="Acesse a Inova Unicamp">
+                    <img src="selo-unicamp.png" alt="Selo Oficial Empresa-Filha Unicamp" class="h-12 w-auto">
+                </a>
+                <span class="text-[10px] text-gray-500 tracking-wider uppercase">Empresa Cadastrada na Inova Unicamp</span>
+            </div>
         </div>
     </footer>
 
