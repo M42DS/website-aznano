@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AZ Nano - Innovation and Sustainability in Cosmetics, Pharmaceuticals, and Agribusiness</title>
+    <meta name="description" content="Enhance your products with innovation in Micro and Nanotechnology. AZ Nano is your strategic R&D partner for a more efficient and sustainable business.">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap" rel="stylesheet">
+
+    <!-- Favicon -->
+    <link rel="icon" href="logo.jpg" type="image/jpeg">
+
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .fade-in-section {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+        .fade-in-section.is-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <!-- ========= HEADER / NAV ========= -->
+    <header id="header" class="bg-white/80 backdrop-blur-md fixed top-0 left-0 w-full z-50 shadow-md transition-all duration-300">
+        <nav class="container mx-auto px-6 py-3 flex justify-between items-center">
+            <!-- Logo & Unicamp Spin-off Seal -->
+            <div class="flex items-center space-x-4">
+                <a href="#home" class="flex items-center space-x-2">
+                    <img src="logo.jpg" alt="AZ Nano Logo" class="h-8 w-8">
+                    <span class="text-2xl font-bold text-gray-900">AZ Nano</span>
+                </a>
+                <span class="hidden sm:inline text-gray-300">|</span>
+                <a href="https://www.inova.unicamp.br/" target="_blank" rel="noopener noreferrer" title="Unicamp Spin-off Company">
+                    <img src="selo-unicamp.png" alt="Unicamp Spin-off Seal" class="hidden sm:block h-8 w-auto">
+                </a>
+            </div>
+
+            <!-- Desktop Menu -->
+            <div class="hidden md:flex space-x-8 items-center">
+                <a href="#about" class="text-gray-600 hover:text-blue-600 transition-colors">About</a>
+                <a href="#solutions" class="text-gray-600 hover:text-blue-600 transition-colors">Solutions</a>
+                <a href="#partnership" class="text-gray-600 hover:text-blue-600 transition-colors">Partnership</a>
+                <a href="#segments" class="text-gray-600 hover:text-blue-600 transition-colors">Segments</a>
+                <a href="#contact" class="bg-blue-600 text-white px-5 py-2 rounded-full hover:bg-blue-700 transition-all shadow-lg hover:shadow-xl">Contact Us</a>
+            </div>
+
+            <!-- Mobile Menu Button -->
+            <div class="md:hidden flex items-center space-x-4">
+                <a href="https://www.inova.unicamp.br/" target="_blank" rel="noopener noreferrer">
+                    <img src="selo-unicamp.png" alt="Unicamp Spin-off Seal" class="h-6 w-auto">
+                </a>
+                <button id="mobile-menu-button" class="text-gray-900 focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+                </button>
+            </div>
+        </nav>
+
+        <!-- Mobile Menu Dropdown -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-b border-gray-200">
+            <a href="#about" class="block text-center py-2 px-4 text-sm text-gray-700 hover:bg-blue-50">About</a>
+            <a href="#segments" class="block text-center py-2 px-4 text-sm text-gray-700 hover:bg-blue-50">Segments</a>
+            <a href="#solutions" class="block text-center py-2 px-4 text-sm text-gray-700 hover:bg-blue-50">Solutions</a>
+            <a href="#partnership" class="block text-center py-2 px-4 text-sm text-gray-700 hover:bg-blue-50">Partnership</a>
+            <a href="#contact" class="block text-center py-4 px-4 text-sm bg-blue-600 text-white hover:bg-blue-700">Contact Us</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- ========= HERO SECTION ========= -->
+        <section id="home" class="relative min-h-screen flex items-center justify-center bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1617957718642-721614447b9b?q=80&w=2070&auto=format&fit=crop');">
+            <div class="absolute inset-0 bg-black/50"></div>
+            <div class="relative text-center text-white p-6 z-10">
+                <h1 class="text-4xl md:text-6xl font-extrabold leading-tight mb-4 tracking-tight">
+                    Innovation and Sustainability for Cosmetics, Healthcare, and Agribusiness Industries
+                </h1>
+                <p class="text-lg md:text-xl max-w-3xl mx-auto mb-8 font-light">
+                    Empower your products with cutting-edge solutions in Micro and Nanotechnology.
+                </p>
+                <a href="#solutions" class="bg-white text-blue-600 font-bold px-8 py-3 rounded-full hover:bg-gray-200 transition-all text-lg shadow-xl hover:shadow-2xl transform hover:scale-105">
+                    Discover Our Solutions
+                </a>
+            </div>
+        </section>
+
+        <!-- ========= ABOUT US SECTION ========= -->
+        <section id="about" class="py-20 lg:py-32 bg-white fade-in-section">
+            <div class="container mx-auto px-6 text-center">
+                <h2 class="text-3xl lg:text-4xl font-bold mb-4">Your Strategic R&D Partner</h2>
+                <p class="max-w-3xl mx-auto text-gray-600 text-lg mb-12">
+                   At AZ Nano, we act as an R&D hub specialized in transforming complex active ingredients into smart delivery systems. We use biopolymers and advanced processes to create microcapsules that ensure the stability of sensitive active ingredients against oxidation and degradation, promoting a controlled and targeted release. Whether in agribusiness, cosmetics, or pharmaceuticals, we connect cutting-edge science to the real efficiency of the final product.
+                </p>
+                <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto text-left">
+                    <div class="bg-gray-50 p-6 rounded-lg border border-gray-200">
+                        <h3 class="font-bold text-xl mb-2 text-blue-600">Our Mission</h3>
+                        <p class="text-gray-600">To lead sector transformation with innovations that set new standards of productivity, food safety, and environmental responsibility.</p>
+                    </div>
+                    <div class="bg-gray-50 p-6 rounded-lg border border-gray-200">
+                        <h3 class="font-bold text-xl mb-2 text-blue-600">Our Vision</h3>
+                        <p class="text-gray-600">To be the benchmark company in nanotechnology applied to cosmetics, pharmaceuticals, and agribusiness in Brazil, uniting science, market, and partnerships to generate innovation and results.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========= SOLUTIONS SECTION ========= -->
+        <section id="solutions" class="py-20 lg:py-32 bg-gray-50 fade-in-section">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl lg:text-4xl font-bold mb-4">Transforming Ideas into Advanced Solutions</h2>
+                    <p class="max-w-2xl mx-auto text-gray-600 text-lg">We offer cutting-edge technology to solve the most complex challenges.</p>
+                </div>
+                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <!-- Card 1: Efficiency -->
+                    <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl transition-shadow transform hover:-translate-y-2">
+                        <div class="bg-blue-100 text-blue-600 rounded-full h-16 w-16 flex items-center justify-center mb-6">
+                            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M12 6V3m0 18v-3M5.636 5.636l-1.414-1.414M19.778 19.778l-1.414-1.414M18.364 5.636l1.414-1.414M4.222 19.778l1.414-1.414M12 12a6 6 0 100-12 6 6 0 000 12z"></path></svg>
+                        </div>
+                        <h3 class="font-bold text-xl mb-3">Enhanced Efficiency</h3>
+                        <p class="text-gray-600">Increased bioavailability and protection of active ingredients, improving the absorption and efficacy of your products.</p>
+                    </div>
+                    <!-- Card 2: Productivity -->
+                    <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl transition-shadow transform hover:-translate-y-2">
+                        <div class="bg-green-100 text-green-600 rounded-full h-16 w-16 flex items-center justify-center mb-6">
+                           <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path></svg>
+                        </div>
+                        <h3 class="font-bold text-xl mb-3">Increased Productivity</h3>
+                        <p class="text-gray-600">Achieve the same benefits using less product. Precise active ingredient delivery, maximizing results and return on investment.</p>
+                    </div>
+                    <!-- Card 3: Sustainability -->
+                    <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl transition-shadow transform hover:-translate-y-2">
+                        <div class="bg-teal-100 text-teal-600 rounded-full h-16 w-16 flex items-center justify-center mb-6">
+                           <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.874 15.016C3.033 13.53 2 11.385 2 9c0-3.866 3.134-7 7-7s7 3.134 7 7c0 2.385-1.033 4.53-2.874 6.016M12 12a3 3 0 100-6 3 3 0 000 6z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+                        </div>
+                        <h3 class="font-bold text-xl mb-3">Sustainable Solutions</h3>
+                        <p class="text-gray-600">Commitment to greener technology, using biopolymers, natural raw materials, and eco-friendly processes.</p>
+                    </div>
+                    <!-- Card 4: Team -->
+                    <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl transition-shadow transform hover:-translate-y-2">
+                        <div class="bg-indigo-100 text-indigo-600 rounded-full h-16 w-16 flex items-center justify-center mb-6">
+                           <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.653-.122-1.28-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.653.122-1.28.356-1.857m0 0a5.002 5.002 0 019.288 0M12 14a4 4 0 100-8 4 4 0 000 8z"></path></svg>
+                        </div>
+                        <h3 class="font-bold text-xl mb-3">Specialized Team</h3>
+                        <p class="text-gray-600">We collaborate at every step of the process to develop the ideal technological solution for your product.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========= SEGMENTS SECTION ========= -->
+        <section id="segments" class="py-20 lg:py-32 bg-white fade-in-section border-t border-gray-100">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl lg:text-4xl font-bold mb-4">Markets We Transform</h2>
+                    <p class="max-w-2xl mx-auto text-gray-600 text-lg">
+                        Our nanotechnology is transversal, adapting to the specific demands of each sector.
+                    </p>
+                </div>
+                
+                <div class="grid md:grid-cols-3 gap-12">
+                    <div class="text-center group">
+                        <div class="mb-6 inline-block p-4 bg-blue-50 rounded-2xl group-hover:bg-blue-600 transition-colors duration-300">
+                            <svg class="w-10 h-10 text-blue-600 group-hover:text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.423 15.621a11.215 11.215 0 01-3.224 3.39c-2.435 1.904-5.13 3.07-7.408 3.39-2.278.321-4.111-.133-5.222-1.244-1.111-1.111-1.565-2.944-1.244-5.222.32-2.278 1.486-4.973 3.39-7.408a11.215 11.215 0 013.39-3.224 11.215 11.215 0 013.224-3.39c2.435-1.904 5.13-3.07 7.408-3.39 2.278-.321 4.111.133 5.222 1.244 1.111 1.111 1.565 2.944 1.244 5.222-.32 2.278-1.486 4.973-3.39 7.408a11.215 11.215 0 01-3.39 3.224z"></path></svg>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3 text-gray-900">High-Performance Cosmetics</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed">
+                            Encapsulation of essential oils, vitamins, and Cerrado active ingredients. We ensure <strong>oxidative stability</strong> and enhance <strong>skin permeation</strong> for visible results.
+                        </p>
+                    </div>
+                    <div class="text-center group">
+                        <div class="mb-6 inline-block p-4 bg-blue-50 rounded-2xl group-hover:bg-blue-600 transition-colors duration-300">
+                            <svg class="w-10 h-10 text-blue-600 group-hover:text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01"></path>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3 text-gray-900">Healthcare and Pharmaceuticals</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed">
+                            Development of <strong>pH-responsive</strong> systems. Microcapsules engineered for gastric resistance and precise enteric release, optimizing drug <strong>bioavailability</strong>.
+                        </p>
+                    </div>
+
+                    <div class="text-center group">
+                        <div class="mb-6 inline-block p-4 bg-blue-50 rounded-2xl group-hover:bg-blue-600 transition-colors duration-300">
+                            <svg class="w-10 h-10 text-blue-600 group-hover:text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-7.714 2.143L11 21l-2.286-6.857L1 12l7.714-2.143L11 3z"></path></svg>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3 text-gray-900">Sustainable Agribusiness</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed">
+                            Protection of bio-inputs and fertilizers. Technology that reduces losses from leaching and volatilization, promoting <strong>precision agriculture</strong> and low environmental impact.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- ========= PARTNERSHIP SECTION (CTA) ========= -->
+        <section id="partnership" class="py-20 lg:py-32 bg-white fade-in-section">
+            <div class="container mx-auto px-6 text-center">
+                <h2 class="text-3xl lg:text-4xl font-bold mb-4">Ready to Innovate Together?</h2>
+                <p class="max-w-3xl mx-auto text-gray-600 text-lg mb-8">
+                    We seek partnerships with cosmetics, pharmaceutical, nutrient, and pesticide manufacturers who wish to innovate and differentiate themselves in the market. Integrate nanotechnology into your portfolio and reach new levels of quality and efficiency.
+                </p>
+                <a href="#contact" class="bg-blue-600 text-white font-bold px-8 py-3 rounded-full hover:bg-blue-700 transition-all text-lg shadow-xl hover:shadow-2xl transform hover:scale-105">
+                    Schedule a Conversation
+                </a>
+            </div>
+        </section>
+        
+        <!-- ========= CONTACT SECTION ========= -->
+        <section id="contact" class="py-20 lg:py-32 bg-gray-900 text-white fade-in-section">
+            <div class="container mx-auto px-6 text-center">
+                <h2 class="text-3xl lg:text-4xl font-bold mb-6">Get in Touch</h2>
+                <p class="max-w-2xl mx-auto text-gray-300 text-lg mb-10">
+                    We are ready to understand your challenges and propose customized solutions.
+                </p>
+                <div class="flex flex-col md:flex-row justify-center items-center space-y-6 md:space-y-0 md:space-x-8">
+                    <!-- Email -->
+                    <a href="mailto:contato@aznano.com.br" class="flex items-center space-x-3 bg-gray-800 p-4 rounded-lg hover:bg-gray-700 transition-colors">
+                        <svg class="w-8 h-8 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+                        <span class="text-lg">contato@aznano.com.br</span>
+                    </a>
+                    <!-- LinkedIn -->
+                    <a href="https://www.linkedin.com/company/aznano" target="_blank" rel="noopener noreferrer" class="flex items-center space-x-3 bg-gray-800 p-4 rounded-lg hover:bg-gray-700 transition-colors">
+                        <svg class="w-8 h-8 text-blue-400" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                        <span class="text-lg">/company/aznano</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- ========= FOOTER WITH UNICAMP SEAL ========= -->
+    <footer class="bg-gray-900 text-gray-400 py-10 border-t border-gray-800">
+        <div class="container mx-auto px-6 flex flex-col md:flex-row justify-between items-center space-y-6 md:space-y-0">
+            <div class="text-center md:text-left text-sm">
+                <p>&copy; 2026 AZ Nano. All rights reserved.</p>
+                <p class="mt-1">Transforming Ideas into Advanced Solutions.</p>
+            </div>
+            <div class="flex flex-col items-center space-y-2">
+                <a href="https://www.inova.unicamp.br/" target="_blank" rel="noopener noreferrer" class="transition-opacity hover:opacity-80" title="Access Inova Unicamp">
+                    <img src="selo-unicamp.png" alt="Official Unicamp Spin-off Seal" class="h-12 w-auto">
+                </a>
+                <span class="text-[10px] text-gray-500 tracking-wider uppercase">Registered Company at Inova Unicamp</span>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ========= ÍCONE / BOTÃO FLUTUANTE DE TRADUÇÃO / IDIOMA ========= -->
+    <div class="fixed bottom-6 right-6 z-50">
+        <a href="index.html" title="Switch to Portuguese" class="flex items-center space-x-2 bg-blue-600 text-white px-4 py-3 rounded-full shadow-2xl hover:bg-blue-700 transition-all transform hover:scale-105">
+            <!-- Ícone de Globo SVG -->
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"></path>
+            </svg>
+            <span class="text-sm font-semibold">PT / EN</span>
+        </a>
+    </div>
+
+    <script>
+        // Mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        mobileMenu.addEventListener('click', (e) => {
+            if (e.target.tagName === 'A') {
+                mobileMenu.classList.add('hidden');
+            }
+        });
+
+        // Fade-in intersection observer
+        const sections = document.querySelectorAll('.fade-in-section');
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('is-visible');
+                }
+            });
+        }, {
+            threshold: 0.1
+        });
+
+        sections.forEach(section => {
+            observer.observe(section);
+        });
+
+        // Shrink header on scroll
+        const header = document.getElementById('header');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                header.classList.add('py-2');
+                header.classList.remove('py-3');
+            } else {
+                header.classList.remove('py-2');
+                header.classList.add('py-3');
+            }
+        });
+    </script>
+
+</body>
+</html>
