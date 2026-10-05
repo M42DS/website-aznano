@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="zh-CN" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AZ Nano - 化妆品、制药与农业领域的创新与可持续发展</title>
+    <meta name="description" content="通过微纳米技术创新赋能您的产品。AZ Nano 是您值得信赖的战略研发伙伴，助您的业务实现高效与可持续发展。">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap" rel="stylesheet">
+
+    <!-- Favicon -->
+    <link rel="icon" href="logo.jpg" type="image/jpeg">
+
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .fade-in-section {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+        .fade-in-section.is-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <!-- ========= HEADER / NAV ========= -->
+    <header id="header" class="bg-white/80 backdrop-blur-md fixed top-0 left-0 w-full z-50 shadow-md transition-all duration-300">
+        <nav class="container mx-auto px-6 py-3 flex justify-between items-center">
+            <!-- Logo & Unicamp Spin-off Seal -->
+            <div class="flex items-center space-x-4">
+                <a href="#home" class="flex items-center space-x-2">
+                    <img src="logo.jpg" alt="AZ Nano Logo" class="h-8 w-8">
+                    <span class="text-2xl font-bold text-gray-900">AZ Nano</span>
+                </a>
+                <span class="hidden sm:inline text-gray-300">|</span>
+                <a href="https://www.inova.unicamp.br/" target="_blank" rel="noopener noreferrer" title="坎皮纳斯大学衍生企业">
+                    <img src="selo-unicamp.png" alt="坎皮纳斯大学衍生企业标志" class="hidden sm:block h-8 w-auto">
+                </a>
+            </div>
+
+            <!-- Desktop Menu -->
+            <div class="hidden md:flex space-x-8 items-center">
+                <a href="#about" class="text-gray-600 hover:text-blue-600 transition-colors">关于我们</a>
+                <a href="#solutions" class="text-gray-600 hover:text-blue-600 transition-colors">解决方案</a>
+                <a href="#partnership" class="text-gray-600 hover:text-blue-600 transition-colors">合作伙伴</a>
+                <a href="#segments" class="text-gray-600 hover:text-blue-600 transition-colors">应用领域</a>
+                <a href="#contact" class="bg-blue-600 text-white px-5 py-2 rounded-full hover:bg-blue-700 transition-all shadow-lg hover:shadow-xl">联系我们</a>
+            </div>
+
+            <!-- Mobile Menu Button -->
+            <div class="md:hidden flex items-center space-x-4">
+                <a href="https://www.inova.unicamp.br/" target="_blank" rel="noopener noreferrer">
+                    <img src="selo-unicamp.png" alt="坎皮纳斯大学衍生企业标志" class="h-6 w-auto">
+                </a>
+                <button id="mobile-menu-button" class="text-gray-900 focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+                </button>
+            </div>
+        </nav>
+
+        <!-- Mobile Menu Dropdown -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-b border-gray-200">
+            <a href="#about" class="block text-center py-2 px-4 text-sm text-gray-700 hover:bg-blue-50">关于我们</a>
+            <a href="#segments" class="block text-center py-2 px-4 text-sm text-gray-700 hover:bg-blue-50">应用领域</a>
+            <a href="#solutions" class="block text-center py-2 px-4 text-sm text-gray-700 hover:bg-blue-50">解决方案</a>
+            <a href="#partnership" class="block text-center py-2 px-4 text-sm text-gray-700 hover:bg-blue-50">合作伙伴</a>
+            <a href="#contact" class="block text-center py-4 px-4 text-sm bg-blue-600 text-white hover:bg-blue-700">联系我们</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- ========= HERO SECTION ========= -->
+        <section id="home" class="relative min-h-screen flex items-center justify-center bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1617957718642-721614447b9b?q=80&w=2070&auto=format&fit=crop');">
+            <div class="absolute inset-0 bg-black/50"></div>
+            <div class="relative text-center text-white p-6 z-10">
+                <h1 class="text-4xl md:text-6xl font-extrabold leading-tight mb-4 tracking-tight">
+                    化妆品、健康与农业产业的创新与可持续发展
+                </h1>
+                <p class="text-lg md:text-xl max-w-3xl mx-auto mb-8 font-light">
+                    通过微纳米技术的尖端解决方案赋能您的产品。
+                </p>
+                <a href="#solutions" class="bg-white text-blue-600 font-bold px-8 py-3 rounded-full hover:bg-gray-200 transition-all text-lg shadow-xl hover:shadow-2xl transform hover:scale-105">
+                    探索我们的解决方案
+                </a>
+            </div>
+        </section>
+
+        <!-- ========= ABOUT US SECTION ========= -->
+        <section id="about" class="py-20 lg:py-32 bg-white fade-in-section">
+            <div class="container mx-auto px-6 text-center">
+                <h2 class="text-3xl lg:text-4xl font-bold mb-4">您的战略研发伙伴</h2>
+                <p class="max-w-3xl mx-auto text-gray-600 text-lg mb-12">
+                   在 AZ Nano，我们作为一个专注于将复杂活性成分转化为智能递送系统的研发枢纽。我们利用生物聚合物和先进工艺制备微胶囊，确保敏感活性成分免受氧化和降解，从而实现可控的靶向释放。无论是在农业、化妆品还是制药领域，我们都将前沿科学与最终产品的实际效能紧密相连。
+                </p>
+                <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto text-left">
+                    <div class="bg-gray-50 p-6 rounded-lg border border-gray-200">
+                        <h3 class="font-bold text-xl mb-2 text-blue-600">我们的使命</h3>
+                        <p class="text-gray-600">引领行业变革，以创新建立生产力、食品安全和环境责任的新标准。</p>
+                    </div>
+                    <div class="bg-gray-50 p-6 rounded-lg border border-gray-200">
+                        <h3 class="font-bold text-xl mb-2 text-blue-600">我们的愿景</h3>
+                        <p class="text-gray-600">成为巴西乃至全球应用于化妆品、制药和农业领域的纳米技术标杆企业，将科学、市场与合作伙伴关系完美结合，创造创新与卓越成果。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========= SOLUTIONS SECTION ========= -->
+        <section id="solutions" class="py-20 lg:py-32 bg-gray-50 fade-in-section">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl lg:text-4xl font-bold mb-4">将构想转化为先进的解决方案</h2>
+                    <p class="max-w-2xl mx-auto text-gray-600 text-lg">我们提供尖端技术，助力解决最复杂的挑战。</p>
+                </div>
+                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <!-- Card 1: Efficiency -->
+                    <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl transition-shadow transform hover:-translate-y-2">
+                        <div class="bg-blue-100 text-blue-600 rounded-full h-16 w-16 flex items-center justify-center mb-6">
+                            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M12 6V3m0 18v-3M5.636 5.636l-1.414-1.414M19.778 19.778l-1.414-1.414M18.364 5.636l1.414-1.414M4.222 19.778l1.414-1.414M12 12a6 6 0 100-12 6 6 0 000 12z"></path></svg>
+                        </div>
+                        <h3 class="font-bold text-xl mb-3">提升效能</h3>
+                        <p class="text-gray-600">提高生物利用度并保护活性成分，从而改善您产品的吸收率与功效。</p>
+                    </div>
+                    <!-- Card 2: Productivity -->
+                    <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl transition-shadow transform hover:-translate-y-2">
+                        <div class="bg-green-100 text-green-600 rounded-full h-16 w-16 flex items-center justify-center mb-6">
+                           <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path></svg>
+                        </div>
+                        <h3 class="font-bold text-xl mb-3">提高生产力</h3>
+                        <p class="text-gray-600">使用更少的产品即可获得相同的益处。精准输送活性成分，最大化成果与投资回报率。</p>
+                    </div>
+                    <!-- Card 3: Sustainability -->
+                    <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl transition-shadow transform hover:-translate-y-2">
+                        <div class="bg-teal-100 text-teal-600 rounded-full h-16 w-16 flex items-center justify-center mb-6">
+                           <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.874 15.016C3.033 13.53 2 11.385 2 9c0-3.866 3.134-7 7-7s7 3.134 7 7c0 2.385-1.033 4.53-2.874 6.016M12 12a3 3 0 100-6 3 3 0 000 6z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+                        </div>
+                        <h3 class="font-bold text-xl mb-3">可持续解决方案</h3>
+                        <p class="text-gray-600">致力于绿色科技，采用生物聚合物、天然原材料和环保工艺。</p>
+                    </div>
+                    <!-- Card 4: Team -->
+                    <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl transition-shadow transform hover:-translate-y-2">
+                        <div class="bg-indigo-100 text-indigo-600 rounded-full h-16 w-16 flex items-center justify-center mb-6">
+                           <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.653-.122-1.28-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.653.122-1.28.356-1.857m0 0a5.002 5.002 0 019.288 0M12 14a4 4 0 100-8 4 4 0 000 8z"></path></svg>
+                        </div>
+                        <h3 class="font-bold text-xl mb-3">专业团队</h3>
+                        <p class="text-gray-600">我们在流程的每一个环节紧密协作，为您的产品研发理想的技术解决方案。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========= SEGMENTS SECTION ========= -->
+        <section id="segments" class="py-20 lg:py-32 bg-white fade-in-section border-t border-gray-100">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl lg:text-4xl font-bold mb-4">我们变革的市场</h2>
+                    <p class="max-w-2xl mx-auto text-gray-600 text-lg">
+                        我们的纳米技术具有通用性，能够适应各个行业的特定需求。
+                    </p>
+                </div>
+                
+                <div class="grid md:grid-cols-3 gap-12">
+                    <div class="text-center group">
+                        <div class="mb-6 inline-block p-4 bg-blue-50 rounded-2xl group-hover:bg-blue-600 transition-colors duration-300">
+                            <svg class="w-10 h-10 text-blue-600 group-hover:text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.423 15.621a11.215 11.215 0 01-3.224 3.39c-2.435 1.904-5.13 3.07-7.408 3.39-2.278.321-4.111-.133-5.222-1.244-1.111-1.111-1.565-2.944-1.244-5.222.32-2.278 1.486-4.973 3.39-7.408a11.215 11.215 0 013.39-3.224 11.215 11.215 0 013.224-3.39c2.435-1.904 5.13-3.07 7.408-3.39 2.278-.321 4.111.133 5.222 1.244 1.111 1.111 1.565 2.944 1.244 5.222-.32 2.278-1.486 4.973-3.39 7.408a11.215 11.215 0 01-3.39 3.224z"></path></svg>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3 text-gray-900">高性能化妆品</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed">
+                            精油、维生素及巴西塞拉多（Cerrado）活性成分的包埋。我们确保<strong>氧化稳定性</strong>并增强<strong>皮肤渗透性</strong>，以实现卓越的可见效果。
+                        </p>
+                    </div>
+                    <div class="text-center group">
+                        <div class="mb-6 inline-block p-4 bg-blue-50 rounded-2xl group-hover:bg-blue-600 transition-colors duration-300">
+                            <svg class="w-10 h-10 text-blue-600 group-hover:text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01"></path>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3 text-gray-900">健康与制药</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed">
+                            开发<strong>pH响应型</strong>系统。专为胃酸耐受和精准肠道释放而设计的微胶囊，优化药物的<strong>生物利用度</strong>。
+                        </p>
+                    </div>
+
+                    <div class="text-center group">
+                        <div class="mb-6 inline-block p-4 bg-blue-50 rounded-2xl group-hover:bg-blue-600 transition-colors duration-300">
+                            <svg class="w-10 h-10 text-blue-600 group-hover:text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-7.714 2.143L11 21l-2.286-6.857L1 12l7.714-2.143L11 3z"></path></svg>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3 text-gray-900">可持续农业</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed">
+                            生物农资与肥料保护技术。减少由淋溶和挥发造成的流失，推动<strong>精准农业</strong>并降低环境影响。
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- ========= PARTNERSHIP SECTION (CTA) ========= -->
+        <section id="partnership" class="py-20 lg:py-32 bg-white fade-in-section">
+            <div class="container mx-auto px-6 text-center">
+                <h2 class="text-3xl lg:text-4xl font-bold mb-4">携手共创创新未来？</h2>
+                <p class="max-w-3xl mx-auto text-gray-600 text-lg mb-8">
+                    我们诚邀期望在市场上创新与脱颖而出的化妆品、制药、营养品及植保产品制造商共同建立合作伙伴关系。将纳米技术融入您的产品组合，迈向品质与效率的新高度。
+                </p>
+                <a href="#contact" class="bg-blue-600 text-white font-bold px-8 py-3 rounded-full hover:bg-blue-700 transition-all text-lg shadow-xl hover:shadow-2xl transform hover:scale-105">
+                    预约咨询
+                </a>
+            </div>
+        </section>
+        
+        <!-- ========= CONTACT SECTION ========= -->
+        <section id="contact" class="py-20 lg:py-32 bg-gray-900 text-white fade-in-section">
+            <div class="container mx-auto px-6 text-center">
+                <h2 class="text-3xl lg:text-4xl font-bold mb-6">联系我们</h2>
+                <p class="max-w-2xl mx-auto text-gray-300 text-lg mb-10">
+                    我们随时准备倾听您的挑战并提供量身定制的解决方案。
+                </p>
+                <div class="flex flex-col md:flex-row justify-center items-center space-y-6 md:space-y-0 md:space-x-8">
+                    <!-- Email -->
+                    <a href="mailto:contato@aznano.com.br" class="flex items-center space-x-3 bg-gray-800 p-4 rounded-lg hover:bg-gray-700 transition-colors">
+                        <svg class="w-8 h-8 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+                        <span class="text-lg">contato@aznano.com.br</span>
+                    </a>
+                    <!-- LinkedIn -->
+                    <a href="https://www.linkedin.com/company/aznano" target="_blank" rel="noopener noreferrer" class="flex items-center space-x-3 bg-gray-800 p-4 rounded-lg hover:bg-gray-700 transition-colors">
+                        <svg class="w-8 h-8 text-blue-400" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                        <span class="text-lg">/company/aznano</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- ========= FOOTER WITH UNICAMP SEAL ========= -->
+    <footer class="bg-gray-900 text-gray-400 py-10 border-t border-gray-800">
+        <div class="container mx-auto px-6 flex flex-col md:flex-row justify-between items-center space-y-6 md:space-y-0">
+            <div class="text-center md:text-left text-sm">
+                <p>&copy; 2026 AZ Nano. 保留所有权利。</p>
+                <p class="mt-1">将构想转化为先进的解决方案。</p>
+            </div>
+            <div class="flex flex-col items-center space-y-2">
+                <a href="https://www.inova.unicamp.br/" target="_blank" rel="noopener noreferrer" class="transition-opacity hover:opacity-80" title="访问 Inova Unicamp">
+                    <img src="selo-unicamp.png" alt="坎皮纳斯大学官方衍生企业标志" class="h-12 w-auto">
+                </a>
+                <span class="text-[10px] text-gray-500 tracking-wider uppercase">坎皮纳斯大学创新署注册企业</span>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ========= ÍCONE / BOTÃO FLUTUANTE DE TRADUÇÃO / IDIOMA ========= -->
+    <div class="fixed bottom-6 right-6 z-50">
+        <a href="index.html" title="切换至葡萄牙语" class="flex items-center space-x-2 bg-blue-600 text-white px-4 py-3 rounded-full shadow-2xl hover:bg-blue-700 transition-all transform hover:scale-105">
+            <!-- Ícone de Globo SVG -->
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"></path>
+            </svg>
+            <span class="text-sm font-semibold">中文 / PT</span>
+        </a>
+    </div>
+
+    <script>
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        mobileMenu.addEventListener('click', (e) => {
+            if (e.target.tagName === 'A') {
+                mobileMenu.classList.add('hidden');
+            }
+        });
+
+        const sections = document.querySelectorAll('.fade-in-section');
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('is-visible');
+                }
+            });
+        }, {
+            threshold: 0.1
+        });
+
+        sections.forEach(section => {
+            observer.observe(section);
+        });
+
+        const header = document.getElementById('header');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                header.classList.add('py-2');
+                header.classList.remove('py-3');
+            } else {
+                header.classList.remove('py-2');
+                header.classList.add('py-3');
+            }
+        });
+    </script>
+
+</body>
+</html>
